@@ -25,7 +25,7 @@ class rkv_ahbram_base_element_sequence extends uvm_sequence;
     `uvm_info("body", "Exiting...", UVM_LOW)
   endtask
 
-  virtual function void compare_data(logic[31:0] val1, logic[31:0] val2);//比较数据
+  virtual function void compare_data(logic[31:0] val1, logic[31:0] val2);
     cfg.seq_check_count++;
     if(val1 === val2)
       `uvm_info("CMPSUC", $sformatf("val1 'h%0x === val2 'h%0x", val1, val2), UVM_LOW)

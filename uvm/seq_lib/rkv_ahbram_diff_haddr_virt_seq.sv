@@ -13,7 +13,7 @@ class rkv_ahbram_diff_haddr_virt_seq extends rkv_ahbram_base_virtual_sequence;
     bit [31:0] addr, data;
     super.body();
     `uvm_info("body", "Entered...", UVM_LOW)
-    for(int i=0; i<(cfg.addr_end >>4); i++) begin
+    for(int i=0; i<(cfg.addr_end >>8); i++) begin
       std::randomize(addr) with {addr[1:0] == 0; addr inside {[cfg.addr_start:cfg.addr_end]};};
       std::randomize(wr_val) with {wr_val == (i << 8) + i;};
       data = wr_val;
