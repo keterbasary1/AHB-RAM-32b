@@ -1,1 +1,1 @@
-# AHB_RAM
+# AHB-RAM-32b
